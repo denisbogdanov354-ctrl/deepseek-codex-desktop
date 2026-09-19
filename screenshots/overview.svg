@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1000" viewBox="0 0 1560 1000">
+<rect width="1560" height="1000" fill="#1b1b1d"/>
+<rect x="0" y="0" width="225" height="1000" fill="#161618"/>
+<line x1="224" y1="0" x2="224" y2="1000" stroke="#36363a"/>
+<style>
+text{font-family:Segoe UI,Arial,sans-serif;fill:#ececee}.muted{fill:#9a9aa0}.small{font-size:15px}.tiny{font-size:13px}.title{font-weight:600;font-size:22px}.head{font-weight:600;font-size:17px}
+</style>
+<text x="24" y="48" class="title">DeepSeek Codex</text>
+<text x="22" y="110" class="small">＋  Новый чат</text>
+<text x="22" y="178" class="tiny muted">ПРОЕКТЫ</text>
+<rect x="14" y="194" width="196" height="28" fill="#2a2d33"/>
+<text x="20" y="214" class="small">demo-app</text>
+<text x="20" y="245" class="small">desktop-client</text>
+<text x="20" y="276" class="small">ai-editor</text>
+<text x="20" y="307" class="small">sample-project</text>
+<text x="20" y="338" class="small">marketing-site</text>
+<text x="22" y="392" class="small">＋  Проект</text>
+<text x="22" y="452" class="tiny muted">ЧАТЫ</text>
+<rect x="14" y="468" width="196" height="38" fill="#202023"/>
+<text x="22" y="492" class="small muted">Поиск чатов</text>
+<text x="280" y="48" class="head">demo-app</text>
+<text x="372" y="48" class="small muted">·  master  ·  DeepSeek Flash</text>
+<text x="920" y="48" class="small muted">master ▾</text>
+<text x="1010" y="48" class="small muted">Точки ▾</text>
+<text x="1085" y="48" class="small muted">Действия ▾</text>
+<text x="1180" y="48" class="small muted">Изменения 12 ▾</text>
+<text x="1305" y="48" class="small muted">Файлы ▾</text>
+<text x="1370" y="48" class="small muted">Терминал ▾</text>
+<text x="1510" y="48" class="small muted">↗</text>
+<text x="770" y="350" text-anchor="middle" font-size="30" font-weight="600">Чем займёмся?</text>
+<text x="770" y="392" text-anchor="middle" class="small muted">demo-app  ·  DeepSeek Flash</text>
+<rect x="390" y="800" rx="16" ry="16" width="780" height="132" fill="#2b2b2e" stroke="#36363a"/>
+<text x="420" y="842" class="small muted">Сообщение DeepSeek...</text>
+<text x="420" y="910" class="small">＋</text>
+<text x="455" y="910" class="small">DeepSeek Flash</text>
+<text x="585" y="910" class="small">Только анализ ▾</text>
+<text x="720" y="910" class="small muted">API · demo</text>
+<text x="815" y="910" class="small muted">Готово</text>
+<circle cx="1128" cy="905" r="18" fill="#2f6fbd"/><text x="1128" y="911" text-anchor="middle" font-size="18">↑</text>
+</svg>
