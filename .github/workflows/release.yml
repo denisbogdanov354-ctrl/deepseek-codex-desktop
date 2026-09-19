@@ -1,0 +1,62 @@
+name: Build and publish release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Build Windows app
+        shell: pwsh
+        run: .\build.ps1
+
+      - name: Archive build
+        shell: pwsh
+        run: Compress-Archive -Path ".\dist\DeepSeek Codex\*" -DestinationPath ".\DeepSeek-Codex-Windows-x64.zip"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: DeepSeek Codex Desktop ${{ github.ref_name }}
+          body: |
+            First public release of DeepSeek Codex Desktop for Windows.
+
+            Highlights:
+            - Native Windows desktop interface
+            - DeepSeek Flash through Codex CLI
+            - Project-based persistent chats
+            - Edit and read-only analysis modes
+            - Git changes, branches and safe revert
+            - Built-in file browser and PowerShell terminal
+            - Attachments and clipboard screenshots
+            - Project checkpoints and restore
+            - Exact token usage from Codex events
+            - Single-instance protection
+
+            Requirements:
+            - Windows 10/11 x64
+            - Codex CLI installed
+            - A configured DeepSeek Codex profile in %USERPROFILE%\.codex-deepseek
+
+            This is an unofficial community project and is not affiliated with OpenAI or DeepSeek.
+          files: DeepSeek-Codex-Windows-x64.zip
+          draft: false
+          prerelease: false
