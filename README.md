@@ -4,6 +4,8 @@ A lightweight Windows desktop client for working with DeepSeek through a Codex-s
 
 > Unofficial community project. Not affiliated with OpenAI or DeepSeek.
 
+![DeepSeek Codex Desktop](screenshots/overview.svg)
+
 DeepSeek Codex Desktop gives you a native desktop workspace for project-based AI coding without replacing your existing Codex installation. It uses a separate DeepSeek Codex profile and calls the installed Codex CLI under the hood.
 
 ## Highlights
@@ -23,6 +25,7 @@ DeepSeek Codex Desktop gives you a native desktop workspace for project-based AI
 - Exact token usage from Codex JSONL events
 - Pinned chats and full-content chat search
 - Single-instance protection
+
 ## Requirements
 
 - Windows 10 or Windows 11
@@ -50,6 +53,7 @@ cd deepseek-codex-desktop
 python -m pip install -r requirements.txt
 python app.py
 ```
+
 ## Build the Windows app
 
 ```powershell
@@ -80,6 +84,7 @@ python app.py
 ```
 
 The app looks for `codex.cmd`, `codex.exe`, or `codex` in PATH and falls back to the standard npm global installation path on Windows.
+
 ## Safety notes
 
 - Read-only analysis mode runs Codex with a read-only sandbox.
