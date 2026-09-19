@@ -26,6 +26,42 @@ DeepSeek Codex Desktop gives you a native desktop workspace for project-based AI
 - Pinned chats and full-content chat search
 - Single-instance protection
 
+## Quick setup for DeepSeek
+
+DeepSeek publishes an official Codex setup script for Windows. This project keeps DeepSeek in a separate Codex profile so it does not replace your normal Codex configuration.
+
+1. Install Codex CLI and launch it at least once:
+
+```powershell
+npm install -g @openai/codex
+codex --version
+```
+
+2. In the same PowerShell window, point Codex at a separate profile:
+
+```powershell
+$env:CODEX_HOME="$env:USERPROFILE\.codex-deepseek"
+New-Item -ItemType Directory -Force -Path $env:CODEX_HOME | Out-Null
+```
+
+3. Run DeepSeek's official Windows setup script:
+
+```powershell
+irm https://cdn.deepseek.com/api-docs/codex-deepseek-setup-en.ps1 | iex
+```
+
+4. Follow the setup menu and enter your own DeepSeek API key when prompted.
+
+5. Start DeepSeek Codex Desktop. By default it reads the isolated profile from:
+
+```text
+%USERPROFILE%\.codex-deepseek
+```
+
+Your API key stays in your local Codex/DeepSeek configuration and is never bundled into this repository or the Windows release.
+
+Official DeepSeek guide: https://api-docs.deepseek.com/quick_start/agent_integrations/codex/
+
 ## Requirements
 
 - Windows 10 or Windows 11
